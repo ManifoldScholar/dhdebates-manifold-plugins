@@ -1,3 +1,73 @@
-.custom-prefooter {
+@import "src/theme/styles/_variables.scss";
+@import "src/theme/styles/base/structure/_index.scss";
+$accentPrimary: #00AEF0;
 
+.custom-prefooter {
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+
+    @include respond($break65) {
+      flex-direction: row;
+    }
+  }
+
+  &__body-text {
+    font-family: 'freight-text-pro', 'aleo', serif;
+    line-height: 1.353em;
+  }
+
+  &__heading {
+    color: $accentPrimary;
+    font-weight: $semibold;
+    font-size: 28px;
+    margin-bottom: 17px;
+    hyphens: none;
+    line-height: 1.18em;
+
+    @include respond($break65) {
+      font-size: 32px;
+    }
+  }
+
+  &__figure {
+    padding-left: 0;
+    margin: 0 auto;
+    padding-bottom: 29px;
+
+    @include respond($break65) {
+      order: 2;
+      padding-left: 10.526vw;
+      padding-bottom: 0;
+    }
+
+    @include respond($break120) {
+      padding-left: 130px;
+    }
+  }
+
+  &__button-container {
+    margin-top: 6px;
+
+    @include respond($break60) {
+      margin-top: 25px;
+    }
+
+    @include respond($break65) {
+      margin-top: 35px;
+    }
+  }
+
+  &__thumbnail {
+    width: 120px;
+
+    @include respond($break20) {
+      width: 37.5vw;
+      max-width: 260px;
+    }
+  }
+
+  &__header-link {
+    text-decoration: none;
+  }
 }
