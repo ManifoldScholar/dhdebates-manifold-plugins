@@ -1,0 +1,53 @@
+@import "src/theme/styles/_variables.scss";
+@import "src/theme/styles/base/structure/_index.scss";
+$logoPadding: 46px;
+
+.custom-logo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 0;
+
+  @include respond($break40) {
+    flex-direction: row;
+  }
+
+  @include respond($break65) {
+    padding-top: 0;
+    padding-left: $logoPadding;
+  }
+
+  svg {
+    max-width: 100%;
+  }
+
+  .logo-row {
+    display: flex;
+
+    &:not(:first-child) {
+      padding-top: 40px;
+      padding-left: 0;
+
+      @include respond($break40) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .logo-link:not(:first-child) {
+    padding-left: $logoPadding;
+  }
+
+  .logo-link, .logo-row {
+    &:not(:first-child) {
+
+      @include respond($break40) {
+        padding-left: 5.75vw;
+      }
+
+      @include respond($break80) {
+        padding-left: $logoPadding;
+      }
+    }
+  }
+}

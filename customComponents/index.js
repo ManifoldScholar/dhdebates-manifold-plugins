@@ -1,5 +1,8 @@
 import PreFooter from "./src/components/PreFooter";
-import FooterLogo from "./src/components/FooterLogo";
+import Logo from "./src/components/Logo";
+import FooterLogic from "./src/components/FooterLogic";
+import ButtonNavigation from "./src/components/ButtonNavigation";
+
 import { registerPlugin, registerComponent } from "actions/plugin";
 
 export default function initialize({ dispatch }) {
@@ -14,8 +17,22 @@ export default function initialize({ dispatch }) {
   dispatch(
     registerComponent(
       "customComponents",
-      "Frontend.Components.Layout.FooterLogo",
-      FooterLogo
+      "Frontend.Components.Layout.Footer.Logo",
+      Logo
+    )
+  );
+  dispatch(
+    registerComponent(
+      "customComponents",
+      "Frontend.Components.Layout.Footer.FooterLogic",
+      FooterLogic
+    )
+  );
+  dispatch(
+    registerComponent(
+      "customComponents",
+      "Frontend.Components.Home.ButtonNavigation",
+      ButtonNavigation
     )
   );
 }

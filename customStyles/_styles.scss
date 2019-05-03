@@ -1,5 +1,67 @@
-@media (min-width: $break75) {
-  .browse main, .backend main {
-    padding-top: 199px;
+.footer-browse {
+  .footer-tertiary {
+    .logo.dull {
+      .manicon {
+        color: $accentPrimary;
+      }
+    }
+  }
+}
+
+.project-cover-button {
+  background-color: #52e3ac;
+}
+
+.header-logo {
+  position: relative;
+
+  figure, &::after {
+    transition: opacity $duration $timing;
+  }
+
+  &::after {
+    content: '';
+    height: 28px;
+    width: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 44 44'%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(2 1)'%3E%3Cpolygon fill='%23FDF002' points='21 34.866 39 42 38.994 19.133 21 12'/%3E%3Cpolygon fill='%2304AAED' points='0 0 .043 14 16 9.056 16 6.052'/%3E%3Cpolygon fill='%23FDF002' points='0 32.859 0 35 16 30.14 16 28'/%3E%3Cpolygon fill='%23FDF002' points='0 27.86 0 30 16 25.14 16 23'/%3E%3Cpolygon fill='%23FDF002' points='0 22.86 0 25 16 20.14 16 18'/%3E%3Cpolygon fill='%23FDF002' points='0 17.859 0 20 16 15.141 16 13'/%3E%3Cpolygon fill='%23EA0501' points='3 3 3.044 17 19 12.056 19 9.052'/%3E%3Cpolyline fill='%23020184' points='23.181 11 37 6.368 37 4 20 9.698'/%3E%3Cpolyline fill='%23020184' points='30.242 13 37 11.063 37 9 27 11.866'/%3E%3Cpolygon fill='%2304AAED' points='26 10.697 29.19 12 40 8.369 40 6'/%3E%3Cpolygon fill='%2304AAED' points='33 12.912 36.289 14 40 12.98 40 11'/%3E%3Cpolyline fill='%2304A302' points='18.954 29 3 33.86 3 36 20 30.822'/%3E%3Cpolyline fill='%2304A302' points='19 25 3 29.86 3 32 19 27.14'/%3E%3Cpolyline fill='%2304A302' points='19 20 3 24.86 3 27 19 22.14'/%3E%3Cpolyline fill='%2304A302' points='19 15 3 19.86 3 22 19 17.14'/%3E%3Cpolygon fill='%23020184' points='37.999 14 35 14.9 38 16'/%3E%3Cpolygon fill='%23EB048C' points='36.995 16.133 37 39 19 31.866 19 9'/%3E%3C/g%3E%3C/svg%3E%0A");
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    @include respond($break40) {
+      height: 34px;
+      width: 34px;
+    }
+
+    @include respond($break75) {
+      height: 42px;
+      width: 42px;
+    }
+  }
+
+  &:hover {
+    figure {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.feature {
+  padding-bottom: 200px;
+  background-image: url('../../../plugins/customStyles/assets/feature_mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @include respond($break75) {
+    padding-bottom: 0;
+    background-image: url('../../../plugins/customStyles/assets/feature_desktop.svg');
+    background-position: top;
+    background-size: cover;
   }
 }
