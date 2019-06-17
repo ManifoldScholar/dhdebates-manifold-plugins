@@ -7,13 +7,13 @@ import { registerPlugin, registerComponent } from "actions/plugin";
 
 export default function initialize({ dispatch }) {
   dispatch(registerPlugin("customComponents"));
-  dispatch(
-    registerComponent(
-      "customComponents",
-      "Frontend.Components.Layout.PreFooter",
-      PreFooter
-    )
-  );
+  // dispatch(
+  //   registerComponent(
+  //     "customComponents",
+  //     "Frontend.Components.Layout.PreFooter",
+  //     PreFooter
+  //   )
+  // );
   dispatch(
     registerComponent(
       "customComponents",
