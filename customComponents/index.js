@@ -1,6 +1,4 @@
-import PreFooter from "./src/components/PreFooter";
 import Logo from "./src/components/Logo";
-import FooterLogic from "./src/components/FooterLogic";
 import ButtonNavigation from "./src/components/ButtonNavigation";
 
 import { registerPlugin, registerComponent } from "actions/plugin";
