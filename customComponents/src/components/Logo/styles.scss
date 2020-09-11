@@ -1,5 +1,6 @@
 @import "src/theme/styles/_variables.scss";
-@import "src/theme/styles/base/structure/_index.scss";
+@import "src/theme/styles/base/structure/_mixins.scss";
+
 $logoPadding: 46px;
 
 .custom-logo {
